@@ -52,7 +52,7 @@ p {
 }
 
 .text-faded {
-    color: rgba(white, .7);
+    color: rgba(white, .8);
 }
 
 section {
@@ -180,6 +180,7 @@ header {
                 margin-bottom: 50px;
             }
         }
+    
     }
     @media (min-width: 768px) {
         min-height: 100%;
@@ -204,6 +205,8 @@ header {
         }
     }
 }
+
+
 
 // Sections
 

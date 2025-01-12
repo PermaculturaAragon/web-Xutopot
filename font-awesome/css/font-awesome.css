@@ -994,6 +994,9 @@
 .fa-chain-broken:before {
   content: "\f127";
 }
+.fa-map:before {
+  content: "\f279";
+}
 .fa-question:before {
   content: "\f128";
 }
