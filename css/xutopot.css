@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'xutofont';
+    src: url('../fonts/xutofont.otf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+  }
+
+
+.letralogo {
+    font-family: 'xutofont';
+    font-size:larger;
+    font-weight: normal;
+    }

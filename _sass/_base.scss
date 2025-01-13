@@ -72,13 +72,13 @@ aside {
 .navbar-default {
     background-color: white;
     border-color: rgba($theme-dark, .5);
-    @include sans-serif-font;
+    
+    font-family: 'xutofont';
     @include transition-all;
     .navbar-header .navbar-brand {
         color: $theme-primary;
-        @include sans-serif-font;
-        font-weight: 700;
-        text-transform: uppercase;
+        font-family: 'xutofont';
+        font-weight: 200;
         &:hover,
         &:focus {
             color: darken($theme-primary, 10%);
@@ -88,9 +88,10 @@ aside {
         > li {
             > a,
             > a:focus {
-                text-transform: uppercase;
+                @include sans-serif-font;
                 font-weight: 700;
-                font-size: 13px;
+                text-transform: uppercase;
+                font-size: 14px;
                 color: $theme-dark;
                 &:hover {
                     color: $theme-primary;
@@ -129,16 +130,17 @@ aside {
             background-color: white;
             border-color: rgba($theme-dark, .5);
             .navbar-header .navbar-brand {
+                font-family: 'xutofont';
                 color: $theme-primary;
-                font-size: 14px;
+                font-size: 25px;
                 &:hover,
                 &:focus {
-                    color: darken($theme-primary, 10%);
+                    color: darken($theme-primary, 80%);
                 }
             }
             .nav > li > a,
             .nav > li > a:focus {
-                color: $theme-dark;
+                color: darken($theme-primary, 20%);
                 &:hover {
                     color: $theme-primary;
                 }
@@ -165,8 +167,9 @@ header {
         width: 100%;
         .header-content-inner {
             h1 {
+                letter-spacing: 0.5rem;
+                text-shadow: 2px 2px 4px rgba(0,0,0,.4);
                 font-weight: 700;
-                text-transform: uppercase;
                 margin-top: 0;
                 margin-bottom: 0;
             }
@@ -223,7 +226,6 @@ header {
         .header-content-inner {
             h1 {
                 font-weight: 700;
-                text-transform: uppercase;
                 margin-top: 0;
                 margin-bottom: 0;
             }
@@ -408,3 +410,25 @@ body {
     -webkit-tap-highlight-color: $theme-dark;
 }
 
+
+
+@font-face {
+    font-family: 'xutofont';
+    src: url('../fonts/xutofont.otf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+  }
+
+
+.letralogo {
+    font-family: 'xutofont';
+    font-size:larger;
+    font-weight: normal;
+    }
+
+.letralogoverde {
+        color: ($theme-primary);
+        font-family: 'xutofont';
+        font-size:larger;
+        font-weight: normal;
+        }

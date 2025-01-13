@@ -10,3 +10,5 @@ github_username:
 
 # Build settings
 markdown: kramdown
+
+site-css: "/css/xutofont.css"
