@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cómo Funciona</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333333;
+            background-color: #ffffff;
+        }
+
+        h2 {
+            color: #ffffff;
+        }
+
+        .section {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            align-items: center;
+        }
+
+        .section:nth-child(odd) {
+            background-color: #00aa5a;
+        }
+
+        .section:nth-child(even) {
+            background-color: #333333;
+        }
+
+        .section:nth-child(odd) h2, .section:nth-child(odd) p {
+            color: #ffffff;
+        }
+
+        .section:nth-child(even) h2, .section:nth-child(even) p {
+            color: #ffffff;
+        }
+
+        .section img {
+            max-width: 40%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .content p {
+            margin: 10px 0;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .buttons button {
+            padding: 10px 20px;
+            background-color: #00aa5a;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .buttons button:hover {
+            background-color: #007d43;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                flex-direction: column;
+            }
+
+            .section img {
+                max-width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="section">
+        <img src="img\boceto.png" alt="Instalación del baño seco">
+        <div class="content">
+            <h2>Instalación del Baño Seco Portátil</h2>
+            <p><strong>Ubicación:</strong> Selecciona un área plana y estable. Si vas a usar varios puedes instalarlos en diferentes espacios para facilitar el acceso a todos.</p>
+            <p><strong>Montaje:</strong> Ensambla la estructura principal siguiendo las instrucciones proporcionadas. Generalmente, dos personas pueden completar el montaje en menos de 15 minutos con sólo una llave allen. Ancla la estructura al suelo con las piquetas proporcionadas.</p>
+            <p><strong>Material Absorbente:</strong> Rellena el cajón de material absorbente como serrín o tierra seca para cubrir los desechos sólidos después de cada uso.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <img src="img\boceto.png" alt="Uso del baño seco">
+        <div class="content">
+            <h2>Uso del Baño Seco</h2>
+            <p><strong>Posición:</strong> Utiliza el baño en posición sentada para garantizar el correcto funcionamiento del sistema de separación.</p>
+            <p><strong>Después de Usar:</strong></p>
+            <ul>
+                <li><strong>Caca:</strong> Cúbrela con una capa de material absorbente para controlar olores y facilitar el proceso de secado y compostaje.</li>
+                <li><strong>Orina:</strong> La orina se dirige automáticamente al contenedor de líquidos o la tubería de riego (dependiendo de la opción elegida); no requiere acción adicional.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section">
+        <img src="img\boceto.png" alt="Mantenimiento del baño seco">
+        <div class="content">
+            <h2>Mantenimiento y Vaciado</h2>
+            <p><strong>Frecuencia:</strong> La frecuencia de vaciado depende del número de usuarios y la intensidad de uso. Es recomendable revisar los niveles de los contenedores diariamente en eventos con alta afluencia.</p>
+            <p><strong>Vaciado de Contenedores:</strong></p>
+            <ul>
+                <li><strong>Líquidos:</strong> Reciclar orina evita el desperdicio de agua potable y puede usarse como abono rico en nutrientes para plantas.</li>
+                <li><strong>Sólidos:</strong> Deposita los residuos sólidos mezclados con papel y serrín en un contenedor municipal o en una compostera designada.</li>
+            </ul>
+            <p><strong>Limpieza:</strong> Usa guantes y agua con jabón biodegradable para limpiar el separador y el cajón después de cada vaciado. Evita productos químicos agresivos.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <img src="img\boceto.png" alt="Gadgets incluidos">
+        <div class="content">
+            <h2>Gadgets Incluidos</h2>
+            <p>Incluye luz solar con detector de movimiento, techo transparente, ventilación natural y anillas para sujeción al suelo. También cuenta con compartimentos para almacenar material secante y superficies barnizadas para facilitar la limpieza.</p>
+        </div>
+    </section>
+
+    <div class="buttons">
+        <button>Botón 1</button>
+        <button>Botón 2</button>
+    </div>
+</body>
+</html>
