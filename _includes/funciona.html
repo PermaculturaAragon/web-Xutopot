@@ -1,209 +1,68 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cómo Funciona</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: #333333;
-            background-color: #ffffff;
-        }
+<section id="funciona">
+  
+  <div class="funciona-page">
+        <div class="funciona-container">
+            <section class="section">
+                <div class="image-container">
+                    <img src="img/boceto.png" alt="Instalación del baño seco">
+                </div>
+                <div class="text-container">
+                    <h2>Instalación del Baño Seco Portátil</h2>
+                    <p><strong>Ubicación:</strong> Selecciona un área plana y estable. Si vas a usar varios puedes instalarlos en diferentes espacios para facilitar el acceso a todos.</p>
+                    <p><strong>Montaje:</strong> Ensambla la estructura principal siguiendo las instrucciones proporcionadas. Generalmente, dos personas pueden completar el montaje en menos de 15 minutos con sólo una llave allen. Ancla la estructura al suelo con las piquetas proporcionadas.</p>
+                    <p><strong>Material Absorbente:</strong> Rellena el cajón de material absorbente como serrín o tierra seca para cubrir los desechos sólidos después de cada uso.</p>
+                </div>
+            </section>
 
-        .funciona-container {
-            max-width: 100%;
-            margin: 0 auto;
-            padding: 0;
-        }
+            <section class="section">
+                <div class="image-container">
+                    <img src="img/boceto.png" alt="Uso del baño seco">
+                </div>
+                <div class="text-container">
+                    <h2>Uso del Baño Seco</h2>
+                    <p><strong>Posición:</strong> Utiliza el baño en posición sentada para garantizar el correcto funcionamiento del sistema de separación.</p>
+                    <p><strong>Después de Usar:</strong></p>
+                    <ul>
+                        <li><strong>Caca:</strong> Cúbrela con una capa de material absorbente para controlar olores y facilitar el proceso de secado y compostaje.</li>
+                        <li><strong>Orina:</strong> La orina se dirige automáticamente al contenedor de líquidos o la tubería de riego (dependiendo de la opción elegida); no requiere acción adicional.</li>
+                    </ul>
+                </div>
+            </section>
 
-        h2 {
-            color: #ffffff;
-            margin-bottom: 10px;
-        }
+            <section class="section">
+                <div class="image-container">
+                    <img src="img/boceto.png" alt="Mantenimiento del baño seco">
+                </div>
+                <div class="text-container">
+                    <h2>Mantenimiento y Vaciado</h2>
+                    <p><strong>Frecuencia:</strong> La frecuencia de vaciado depende del número de usuarios y la intensidad de uso. Es recomendable revisar los niveles de los contenedores diariamente en eventos con alta afluencia.</p>
+                    <p><strong>Vaciado de Contenedores:</strong></p>
+                    <ul>
+                        <li><strong>Líquidos:</strong> Reciclar orina evita el desperdicio de agua potable y puede usarse como abono rico en nutrientes para plantas.</li>
+                        <li><strong>Sólidos:</strong> Deposita los residuos sólidos mezclados con papel y serrín en un contenedor municipal o en una compostera designada.</li>
+                    </ul>
+                    <p><strong>Limpieza:</strong> Usa guantes y agua con jabón biodegradable para limpiar el separador y el cajón después de cada vaciado. Evita productos químicos agresivos.</p>
+                </div>
+            </section>
 
-        .section {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            padding: 20px 0;
-        }
-
-        .section:nth-child(odd) {
-            background-color: #00aa5a;
-        }
-
-        .section:nth-child(even) {
-            background-color: #333333;
-        }
-
-        .section:nth-child(odd) h2, .section:nth-child(odd) p {
-            color: #ffffff;
-        }
-
-        .section:nth-child(even) h2, .section:nth-child(even) p {
-            color: #ffffff;
-        }
-
-        .section .image-container {
-            flex: 1 1 40%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 10px;
-        }
-
-        .section .image-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .section .text-container {
-            flex: 1 1 50%;
-            padding: 10px;
-        }
-
-        .text-container p {
-            margin: 10px 0;
-        }
-
-        .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin: 20px 0;
-        }
-
-        .buttons button {
-            padding: 10px 20px;
-            background-color: #00aa5a;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .buttons button:hover {
-            background-color: #007d43;
-        }
-        .section {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 10px; /* Reducir espacio entre elementos */
-    padding: 20px 0; /* Reducir padding interno */
-}
-
-.section img {
-    max-width: 35%; /* Ajustar tamaño máximo */
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.content {
-    flex: 1;
-    padding: 10px;
-    margin: 0; /* Eliminar margen extra */
-}
-@media (max-width: 768px) {
-    .section {
-        flex-direction: column;
-        gap: 15px; /* Un poco más de espacio para móvil */
-        padding: 10px 0;
-    }
-
-    .section img {
-        max-width: 90%; /* Imagen ocupa casi todo el ancho en móvil */
-    }
-
-    .content {
-        padding: 0;
-    }
-}
-
-
-        @media (max-width: 768px) {
-            .section {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .section .image-container, .section .text-container {
-                flex: 1 1 100%;
-            }
-
-            .section .image-container {
-                margin-bottom: 15px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <div class="funciona-container">
-        <section class="section">
-            <div class="image-container">
-                <img src="img\boceto.png" alt="Instalación del baño seco">
-            </div>
-            <div class="text-container">
-                <h2>Instalación del Baño Seco Portátil</h2>
-                <p><strong>Ubicación:</strong> Selecciona un área plana y estable. Si vas a usar varios puedes instalarlos en diferentes espacios para facilitar el acceso a todos.</p>
-                <p><strong>Montaje:</strong> Ensambla la estructura principal siguiendo las instrucciones proporcionadas. Generalmente, dos personas pueden completar el montaje en menos de 15 minutos con sólo una llave allen. Ancla la estructura al suelo con las piquetas proporcionadas.</p>
-                <p><strong>Material Absorbente:</strong> Rellena el cajón de material absorbente como serrín o tierra seca para cubrir los desechos sólidos después de cada uso.</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="image-container">
-                <img src="img\boceto.png" alt="Uso del baño seco">
-            </div>
-            <div class="text-container">
-                <h2>Uso del Baño Seco</h2>
-                <p><strong>Posición:</strong> Utiliza el baño en posición sentada para garantizar el correcto funcionamiento del sistema de separación.</p>
-                <p><strong>Después de Usar:</strong></p>
-                <ul>
-                    <li><strong>Caca:</strong> Cúbrela con una capa de material absorbente para controlar olores y facilitar el proceso de secado y compostaje.</li>
-                    <li><strong>Orina:</strong> La orina se dirige automáticamente al contenedor de líquidos o la tubería de riego (dependiendo de la opción elegida); no requiere acción adicional.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="image-container">
-                <img src="img\boceto.png" alt="Mantenimiento del baño seco">
-            </div>
-            <div class="text-container">
-                <h2>Mantenimiento y Vaciado</h2>
-                <p><strong>Frecuencia:</strong> La frecuencia de vaciado depende del número de usuarios y la intensidad de uso. Es recomendable revisar los niveles de los contenedores diariamente en eventos con alta afluencia.</p>
-                <p><strong>Vaciado de Contenedores:</strong></p>
-                <ul>
-                    <li><strong>Líquidos:</strong> Reciclar orina evita el desperdicio de agua potable y puede usarse como abono rico en nutrientes para plantas.</li>
-                    <li><strong>Sólidos:</strong> Deposita los residuos sólidos mezclados con papel y serrín en un contenedor municipal o en una compostera designada.</li>
-                </ul>
-                <p><strong>Limpieza:</strong> Usa guantes y agua con jabón biodegradable para limpiar el separador y el cajón después de cada vaciado. Evita productos químicos agresivos.</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <div class="image-container">
-                <img src="img\boceto.png" alt="Gadgets incluidos">
-            </div>
-            <div class="text-container">
-                <h2>Gadgets Incluidos</h2>
-                <p>Incluye luz solar con detector de movimiento, techo transparente, ventilación natural y anillas para sujeción al suelo. También cuenta con compartimentos para almacenar material secante y superficies barnizadas para facilitar la limpieza.</p>
-            </div>
-        </section>
-
-        <div class="buttons">
-            <button>Botón 1</button>
-            <button>Botón 2</button>
+            <section class="section">
+                <div class="image-container">
+                    <img src="img/boceto.png" alt="Uso del baño seco">
+                </div>
+                <div class="text-container">
+                    <h2>Gadgets incluídos que nunca vienen mal.</h2>
+                    <ul>
+                        <li><i class="fa fa-check"></i> <strong>Luz solar con detector de movimiento:</strong> para encontrar el WC de noche.</li>
+                        <li><i class="fa fa-check"></i> <strong>Techo transparente:</strong> que ilumina el interior de día.</li>
+                        <li><i class="fa fa-check"></i> <strong>Ventilación natural:</strong> que reduce aún más los posibles olores.</li>
+                        <li><i class="fa fa-check"></i> <strong>Anillas para sujeción:</strong> con piquetas al suelo.</li>
+                        <li><i class="fa fa-check"></i> <strong>Cerrojo con aviso de “ocupado”:</strong> que se puede abrir desde el exterior ante una emergencia.</li>
+                        <li><i class="fa fa-check"></i> <strong>Compartimento para almacenar serrín:</strong> o cualquier otro secante.</li>
+                        <li><i class="fa fa-check"></i> <strong>Barnizado de calidad:</strong> para hacer limpiable todas las superficies.</li>
+                      </ul>
+                </div>
+            </section>
         </div>
     </div>
-</body>
-</html>
+
+</section>

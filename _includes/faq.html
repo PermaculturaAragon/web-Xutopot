@@ -5,17 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FAQ</title>
   <style>
-    /* Estilos específicos para la sección FAQ */
+    /* Estilos generales */
+
+
     .custom-faq-section {
-      font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
-      max-width: 600px;
+      max-width: 1200px;
       margin: 0 auto;
       padding: 20px;
       box-sizing: border-box;
+      color: #333333;
     }
 
     .custom-faq-section h2 {
       text-align: center;
+    }
+
+    .faq-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .faq-column {
+      flex: 1 1 calc(50% - 20px);
+      box-sizing: border-box;
     }
 
     .custom-faq-item {
@@ -26,12 +39,14 @@
     }
 
     .custom-faq-question {
+      font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
       display: block;
       width: 100%;
       text-align: left;
       padding: 10px 15px;
       font-size: 16px;
-      background: #f0f0f0;
+      background: #00AA5A;
+      color: #ffffff;
       border: none;
       cursor: pointer;
       font-weight: bold;
@@ -39,27 +54,27 @@
     }
 
     .custom-faq-question:hover {
-      background: #e0e0e0;
+      background: #007F43;
     }
 
     .custom-faq-answer {
-      font-family: "Merriweather", "Helvetica Neue", Arial, sans-serif;
       max-height: 0;
       overflow: hidden;
       padding: 0 15px;
+      color: #333333;
       background: #fafafa;
       transition: max-height 0.4s ease, padding 0.4s ease;
     }
 
     .custom-faq-answer.open {
-      max-height: 500px; /* Altura máxima para mostrar contenido */
+      max-height: 500px;
       padding: 10px 15px;
     }
 
     /* Estilos responsivos */
     @media (max-width: 600px) {
-      .custom-faq-section {
-        padding: 10px;
+      .faq-column {
+        flex: 1 1 100%;
       }
 
       .custom-faq-question {
@@ -81,87 +96,84 @@
   <section class="custom-faq-section">
     <h2>Preguntas Frecuentes</h2>
     <hr class="primary">
-    <div class="custom-faq-item">
-      <button class="custom-faq-question">¿Qué es un baño seco?</button>
-      <div class="custom-faq-answer">
-        <p>Un baño seco es un sistema sanitario que no utiliza agua para la eliminación de desechos humanos. Funciona separando los residuos líquidos y sólidos, facilitando su manejo y reduciendo el impacto ambiental.</p>
+    <div class="faq-container">
+      <!-- Primera columna -->
+      <div class="faq-column">
+        <div class="custom-faq-item">
+          <button class="custom-faq-question">¿Qué es un baño seco?</button>
+          <div class="custom-faq-answer">
+            <p>Un baño seco es un sistema sanitario que no utiliza agua para la eliminación de desechos humanos...</p>
+          </div>
+        </div>
+        <div class="custom-faq-item">
+          <button class="custom-faq-question">¿Cómo se controlan los olores en un baño seco?</button>
+          <div class="custom-faq-answer">
+            <p>Los olores se minimizan mediante la separación de líquidos y sólidos...</p>
+          </div>
+        </div>
+        <div class="custom-faq-item">
+          <button class="custom-faq-question">¿Es seguro utilizar un baño seco portátil?</button>
+          <div class="custom-faq-answer">
+            <p>Sí, es seguro siempre que se sigan las instrucciones de uso y mantenimiento...</p>
+          </div>
+        </div>
+        <div class="custom-faq-item">
+          <button class="custom-faq-question">¿Qué se hace con los desechos después de su uso?</button>
+          <div class="custom-faq-answer">
+            <p>Los desechos sólidos pueden compostarse durante un mínimo de 6 meses...</p>
+          </div>
+        </div>
+        <div class="custom-faq-item">
+          <button class="custom-faq-question">¿Cuánta agua se ahorra utilizando un baño seco?</button>
+          <div class="custom-faq-answer">
+            <p>Los baños secos no requieren agua para su funcionamiento...</p>
+          </div>
+        </div>
+        <div class="custom-faq-item">
+          <button class="custom-faq-question">¿Diferencias entre inodoros químicos y secos?</button>
+          <div class="custom-faq-answer">
+            <p>Los inodoros químicos emplean productos químicos para descomponer los desechos...</p>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="custom-faq-item">
-      <button class="custom-faq-question">¿Cómo se controlan los olores en un baño seco?</button>
-      <div class="custom-faq-answer">
-        <p>Los olores se minimizan mediante la separación de líquidos y sólidos, y cubriendo las heces con materiales absorbentes como serrín o tierra seca. Además, la ventilación adecuada y el vaciado regular de los contenedores contribuyen a mantener un ambiente sin los olores de un WC químico o letrinas de las de “antes”.</p>
-      </div>
-    </div>
-
-    <div class="custom-faq-item">
-      <button class="custom-faq-question">¿Es seguro utilizar un baño seco portátil?</button>
-      <div class="custom-faq-answer">
-        <p>Sí, es seguro siempre que se sigan las instrucciones de uso y mantenimiento. El manejo adecuado de los desechos y la higiene regular del sistema garantizan su seguridad y salubridad.</p>
-      </div>
-    </div>
-
-    <div class="custom-faq-item">
-      <button class="custom-faq-question">¿Qué se hace con los desechos después de su uso?</button>
-      <div class="custom-faq-answer">
-        <p>Los desechos sólidos pueden compostarse durante un mínimo de 6 meses en una instalación adecuada, convirtiéndose en abono útil para la agricultura o jardinería (no para el huerto de hortalizas). También pueden verterse en el contenedor de residuos del municipio donde te encuentres como se haría con los pañales usados de un bebé. La orina puede diluirse y utilizarse como fertilizante rico en nutrientes o eliminarse según las normativas locales.</p>
-      </div>
-    </div>
-
-    <div class="custom-faq-item">
-      <button class="custom-faq-question">¿Cuánta agua se ahorra utilizando un baño seco?</button>
-      <div class="custom-faq-answer">
-        <p>Los baños secos no requieren agua para su funcionamiento, lo que permite un ahorro significativo de este recurso, especialmente en áreas donde el agua es escasa.</p>
-      </div>
-    </div>
-
-    <div class="custom-faq-item">
-      <button class="custom-faq-question">¿Diferencias entre inodoros químicos y secos?</button>
-      <div class="custom-faq-answer">
-        <p>Los inodoros químicos emplean productos químicos para descomponer los desechos y controlar olores, pero requieren agua, aditivos y eliminación en estaciones específicas, con posible impacto ambiental negativo. En contraste, los inodoros secos separan desechos líquidos y sólidos, facilitando su compostaje sin agua ni químicos, lo que los hace más sostenibles y ecológicos.</p>
-      </div>
-    </div>
-
-    <div class="custom-faq-item">
-      <button class="custom-faq-question">¿Cómo se limpia un baño seco portátil?</button>
-      <div class="custom-faq-answer">
-        <p>La limpieza se realiza con agua y jabón biodegradable. Es importante evitar productos químicos agresivos que puedan dañar el medio ambiente o elementos abrasivos que puedan rayar su superficie. Se recomienda limpiar los componentes después de cada vaciado para mantener la higiene.</p>
-      </div>
-    </div>
-
-    <div class="custom-faq-item">
-      <button class="custom-faq-question">¿Pueden utilizarlo niñas, niños, mujeres y hombres?</button>
-      <div class="custom-faq-answer">
-        <p>Sí, el diseño del baño seco portátil está pensado para ser utilizado cómodamente por cualquier persona, independientemente de su género. Se recomienda la posición sentada para asegurar la correcta separación de los desechos.</p>
-      </div>
-    </div>
-
-    <div class="custom-faq-item">
-      <button class="custom-faq-question">¿Qué puedo usar como secante?</button>
-      <div class="custom-faq-answer">
-        <p>Hay una gran variedad de productos que se pueden usar como secantes: serrín, cenizas, arena, hojas secas, tierra, posos de café, compost maduro y seco, dependiendo del uso que se quiera dar a los desechos.</p>
-      </div>
-    </div>
-
-    <div class="custom-faq-item">
-      <button class="custom-faq-question">¿Dónde puedo utilizar un baño seco portátil?</button>
-      <div class="custom-faq-answer">
-        <p>Es ideal para campamentos, eventos al aire libre, áreas rurales sin acceso a sistemas de alcantarillado y situaciones de emergencia donde no hay disponibilidad de baños convencionales.</p>
-      </div>
-    </div>
-
-    <div class="custom-faq-item">
-      <button class="custom-faq-question">¿El papel higiénico y compresas dónde van?</button>
-      <div class="custom-faq-answer">
-        <p>Si se desecharán en un contenedor, se pueden tirar sin problema. Si se compostarán, es mejor usar papel ecológico y evitar productos no biodegradables.</p>
-      </div>
-    </div>
-
-    <div class="custom-faq-item">
-      <button class="custom-faq-question">¿Las niñas y niños sabrán usarlo?</button>
-      <div class="custom-faq-answer">
-        <p>Los niños suelen adaptarse rápidamente. Mediante dinámicas y juegos, aprenden a utilizarlo correctamente, cuidando el medioambiente de forma divertida y gratificante.</p>
+      <!-- Segunda columna -->
+      <div class="faq-column">
+        <div class="custom-faq-item">
+          <button class="custom-faq-question">¿Cómo se limpia un baño seco portátil?</button>
+          <div class="custom-faq-answer">
+            <p>La limpieza se realiza con agua y jabón biodegradable...</p>
+          </div>
+        </div>
+        <div class="custom-faq-item">
+          <button class="custom-faq-question">¿Pueden utilizarlo niñas, niños, mujeres y hombres?</button>
+          <div class="custom-faq-answer">
+            <p>Sí, el diseño del baño seco portátil está pensado para ser utilizado cómodamente...</p>
+          </div>
+        </div>
+        <div class="custom-faq-item">
+          <button class="custom-faq-question">¿Qué puedo usar como secante?</button>
+          <div class="custom-faq-answer">
+            <p>Hay una gran variedad de productos que se pueden usar como secantes: serrín, cenizas...</p>
+          </div>
+        </div>
+        <div class="custom-faq-item">
+          <button class="custom-faq-question">¿Dónde puedo utilizar un baño seco portátil?</button>
+          <div class="custom-faq-answer">
+            <p>Es ideal para campamentos, eventos al aire libre...</p>
+          </div>
+        </div>
+        <div class="custom-faq-item">
+          <button class="custom-faq-question">¿El papel higiénico y compresas dónde van?</button>
+          <div class="custom-faq-answer">
+            <p>Si se desecharán en un contenedor, se pueden tirar sin problema...</p>
+          </div>
+        </div>
+        <div class="custom-faq-item">
+          <button class="custom-faq-question">¿Las niñas y niños sabrán usarlo?</button>
+          <div class="custom-faq-answer">
+            <p>Los niños suelen adaptarse rápidamente. Mediante dinámicas y juegos...</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -188,5 +200,3 @@
   </script>
 </body>
 </html>
-
-

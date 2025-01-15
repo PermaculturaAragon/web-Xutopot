@@ -578,3 +578,122 @@ body {
     line-height: 1.5;
     color: #555;
   }
+
+
+          /* Aseguramos que todos los estilos estén encapsulados en .funciona-page */
+          .funciona-page {
+            font-family: "Merriweather", "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: #333333;
+            background-color: #ffffff;
+        }
+
+        .funciona-page .funciona-container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .funciona-page h2 {
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        .funciona-page li {
+            color: #ffffff;
+            margin-bottom: 0;
+        }
+        .funciona-page ul {
+
+            margin-bottom: 0;
+        }
+
+        .funciona-page .section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 0 0;
+        }
+
+        .funciona-page .section:nth-child(odd) {
+            background-color: #00aa5a;
+        }
+
+        .funciona-page .section:nth-child(even) {
+            background-color: #333333;
+        }
+
+        .funciona-page .section:nth-child(odd) h2, 
+        .funciona-page .section:nth-child(odd) p {
+            color: #ffffff;
+        }
+
+        .funciona-page .section:nth-child(even) h2, 
+        .funciona-page .section:nth-child(even) p {
+            color: #ffffff;
+        }
+
+        .funciona-page .section .image-container {
+            flex: 1 1 20%;
+            height: auto; /* Puede ser ajustado según el diseño */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Oculta las partes de la imagen que se salen del contenedor */
+        }
+
+        .funciona-page .section .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   /* border-radius: 10px;*/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+        .funciona-page .section .text-container {
+            flex: 1 1 70%;
+            padding: 35px;
+        }
+
+        .funciona-page .text-container p {
+            margin: 10px 0;
+        }
+
+        .funciona-page .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .funciona-page .buttons button {
+            padding: 10px 20px;
+            background-color: #00aa5a;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .funciona-page .buttons button:hover {
+            background-color: #007d43;
+        }
+
+        /* Estilos responsivos */
+        @media (max-width: 768px) {
+            .funciona-page .section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .funciona-page .section .image-container, 
+            .funciona-page .section .text-container {
+                flex: 1 1 100%;
+            }
+
+            .funciona-page .section .image-container {
+                margin-bottom: 15px;
+            }
+        }
