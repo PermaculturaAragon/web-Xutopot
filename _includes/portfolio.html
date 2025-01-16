@@ -1,60 +1,167 @@
-<section class="no-padding" id="portfolio">
-    <div class="container-fluid">
-        <div class="row no-gutter">
-            <!-- Historia y visión -->
-            <div class="col-lg-4 col-sm-6">
-                <a href="#portfolio" class="portfolio-container">
-                    <img src="img/portfolio/1.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-container-caption">
-                        <div class="portfolio-container-caption-content">
-                            <div class="portfolio-category text-faded">
-                                Historia y visión
-                            </div>
-                            <div class="portfolio-description">
-                                De la observación a la acción<br><br>
-                                Todo comenzó tras observar algo que no encajaba: Educadores de grupos scouts alquilando baños químicos para sus campamentos. Como promotor de cursos sobre campamentos sostenibles, esa realidad me dejó claro que, en algún punto, habíamos fallado. Fue entonces, con el objetivo de facilitar la implementación de WC secos, cuando nació Xutopot, como una respuesta práctica y coherente a nuestras propias contradicciones, y como una herramienta para avanzar hacia un mundo más respetuoso con el medioambiente.<br><br>
-                                Guiados por los valores scouts y las 3 éticas de la permacultura, creemos que cada elección cuenta. Nuestro propósito es ofrecer a quienes trabajan por el cuidado del planeta una solución real y sostenible, ayudándoles a cumplir su misión sin comprometer sus ideales.
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- Nuestro compromiso -->
-            <div class="col-lg-4 col-sm-6">
-                <a href="" class="portfolio-container">
-                    <img src="img/portfolio/2.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-container-caption">
-                        <div class="portfolio-container-caption-content">
-                            <div class="portfolio-category text-faded">
-                                Nuestro compromiso
-                            </div>
-                            <div class="portfolio-description">
-                                Autenticidad y sostenibilidad<br><br>
-                                Nos posicionamos en contra del greenwashing, esa práctica engañosa que disfraza productos de sostenibles cuando no lo son. En Xutopot, hacemos lo que decimos: baños secos verdaderamente ecológicos, fabricados localmente con materiales renovables y certificados y te acompañamos en la implementación de los mismos con tus educandos y usuarios. Nuestro compromiso no es solo con el medioambiente, sino con la transparencia y la coherencia en cada paso que damos.
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <!-- Qué ofrecemos -->
-            <div class="col-lg-4 col-sm-6">
-                <a href="#" class="portfolio-container">
-                    <img src="img/portfolio/3.jpg" class="img-responsive" alt="">
-                    <div class="portfolio-container-caption">
-                        <div class="portfolio-container-caption-content">
-                            <div class="portfolio-category text-faded">
-                                Qué ofrecemos
-                            </div>
-                            <div class="portfolio-description">
-                                Soluciones reales para un futuro mejor<br><br>
-                                Producto: un baño seco portátil, desmontable, diseñado para ser práctico, eficiente y respetuoso con el entorno.<br><br>
-                                Servicios: asesoramiento especializado, transporte opcional, y dinámicas educativas que enseñan, de manera sencilla y efectiva, el uso del WC seco y la importancia de cerrar los círculos de recursos.<br><br>
-                                Queremos ser aliados de quienes ya están trabajando por un mundo mejor. En cada campamento, en cada evento al aire libre, estamos aquí para demostrar que el cambio es posible, si lo hacemos juntas.
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categorías Interactivas</title>
+  <style>
+    /* Estilos generales */
+    .categories-section {
+      max-width: 100%;
+      margin: 0 auto;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .categories-section h2 {
+      margin-bottom: 20px;
+    }
+
+    .categories-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .category {
+      position: relative;
+      flex: 1 1 calc(33.333% - 20px);
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 10px;
+      height: 300px; /* Altura fija para evitar movimiento */
+    }
+
+    .category img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: filter 0.3s ease;
+    }
+
+    .category:hover img {
+      filter: brightness(70%);
+    }
+
+    .category-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 1.5em;
+      font-weight: bold;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .category-title.hidden {
+      opacity: 0;
+      transform: translate(-50%, -40%); /* Se mueve ligeramente hacia arriba */
+    }
+
+    .category-description {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #000;
+      padding: 15px;
+      box-sizing: border-box;
+      border-radius: 10px;
+      overflow-y: auto;
+      opacity: 0;
+      transform: scale(0.9); /* Inicia un poco más pequeño */
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      z-index: 10;
+      pointer-events: none; /* Evitar clics cuando está oculto */
+    }
+
+    .category-description.open {
+      opacity: 1;
+      transform: scale(1); /* Se expande suavemente */
+      pointer-events: auto;
+    }
+
+    /* Estilos responsivos */
+    @media (max-width: 900px) {
+      .category {
+        flex: 1 1 calc(50% - 20px);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .category {
+        flex: 1 1 100%;
+      }
+
+      .category-title {
+        font-size: 1.2em;
+      }
+    }
+  </style>
+</head>
+<body id="nosotros">
+  <section class="categories-section" id="nosotros">
+    <h2>Sobre Nosotros</h2>
+    <div class="categories-container">
+      <div class="category" data-description="Todo comenzó tras observar algo que no encajaba: Educadores de grupos scouts alquilando baños químicos para sus campamentos. Como promotor de cursos sobre campamentos sostenibles, esa realidad me dejó claro que, en algún punto, habíamos fallado. Fue entonces, con el objetivo de facilitar la implementación de WC secos, cuando nació Xutopot, como una respuesta práctica y coherente a nuestras propias contradicciones, y como una herramienta para avanzar hacia un mundo más respetuoso con el medioambiente.
+      Guiados por los valores scouts y las 3 éticas de la permacultura, creemos que cada elección cuenta. Nuestro propósito es ofrecer a quienes trabajan por el cuidado del planeta una solución real y sostenible, ayudándoles a cumplir su misión sin comprometer sus ideales.
+      ">
+        <img src="img/boceto.png" alt="Categoría 1">
+        <div class="category-title">Historia y visión: De la observación a la acción</div>
+        <div class="category-description"></div>
+      </div>
+
+      <div class="category" data-description="Nos posicionamos en contra del greenwashing, esa práctica engañosa que disfraza productos de sostenibles cuando no lo son. En Xutopot, hacemos lo que decimos: baños secos verdaderamente ecológicos, fabricados localmente con materiales renovables y certificados y te acompañamos en la implementación de los mismos con tus educandos y usuarios. Nuestro compromiso no es solo con el medioambiente, sino con la transparencia y la coherencia en cada paso que damos.">
+        <img src="img/boceto.png" alt="Categoría 2">
+        <div class="category-title">Nuestro compromiso: Autenticidad y sostenibilidad</div>
+        <div class="category-description"></div>
+      </div>
+
+      <div class="category" data-description="Producto: un baño seco portátil, desmontable, diseñado para ser práctico, eficiente y respetuoso con el entorno.
+      Servicios: asesoramiento especializado, transporte opcional, y dinámicas educativas que enseñan, de manera sencilla y efectiva el uso del WC seco y la importancia de cerrar los círculos de recursos.
+      Queremos ser aliados de quienes ya están trabajando por un mundo mejor. En cada campamento, en cada evento al aire libre, estamos aquí para demostrar que el cambio es posible, si lo hacemos juntas.
+      ">
+        <img src="img/boceto.png" alt="Categoría 3">
+        <div class="category-title">Qué ofrecemos: Soluciones reales para un futuro mejor</div>
+        <div class="category-description"></div>
+      </div>
     </div>
-</section>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.category').forEach(category => {
+        category.addEventListener('click', () => {
+          const descriptionDiv = category.querySelector('.category-description');
+          const titleDiv = category.querySelector('.category-title');
+          const isOpen = descriptionDiv.classList.contains('open');
+
+          // Cerrar cualquier descripción abierta
+          document.querySelectorAll('.category-description').forEach(desc => {
+            desc.classList.remove('open');
+          });
+
+          document.querySelectorAll('.category-title').forEach(title => {
+            title.classList.remove('hidden');
+          });
+
+          // Abrir solo si no estaba abierta
+          if (!isOpen) {
+            descriptionDiv.textContent = category.getAttribute('data-description');
+            descriptionDiv.classList.add('open');
+            titleDiv.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+
+
