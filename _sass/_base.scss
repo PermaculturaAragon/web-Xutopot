@@ -432,9 +432,10 @@ body {
 
 /* Contenedor general */
 .que-es-section {
-    padding: 50px 20px;
+    padding: 0px;
     background-color: #f9f9f9; /* Color de fondo, puedes ajustarlo */
   }
+  
   
   /* Filas y columnas */
   .que-es-section .row {
@@ -455,12 +456,14 @@ body {
     font-size: 2em;
     margin-bottom: 20px;
     color: #333;
+    text-align: center;
   }
   
   .que-es-section .text-content p {
     font-size: 1.2em;
     line-height: 1.6;
     color: #555;
+    text-align: center;
   }
   
   /* Columna de imagen */
@@ -474,7 +477,7 @@ body {
   .que-es-section .responsive-image {
     width: 100%; /* Imagen se adapta al contenedor */
     height: auto; /* Mantiene proporciones */
-    border-radius: 10px; /* Opcional: bordes redondeados */
+
   }
   
   /* Responsividad */
@@ -525,125 +528,146 @@ body {
     color: #555;
   }
 
+/* Estilo principal para la página */
+.funciona-page {
+    font-family: "Merriweather", "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+ 
+    background-color: #ffffff;
+}
 
-          /* Aseguramos que todos los estilos estén encapsulados en .funciona-page */
-          .funciona-page {
-            font-family: "Merriweather", "Helvetica Neue", Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: #333333;
-            background-color: #ffffff;
-        }
+.funciona-page .funciona-container {
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 0;
+}
 
-        .funciona-page .funciona-container {
-            max-width: 100%;
-            margin: 0 auto;
-            padding: 0;
-        }
+/* Encabezados y listas */
+.funciona-page h2 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
 
-        .funciona-page h2 {
-            color: #ffffff;
-            margin-bottom: 0;
-        }
-        .funciona-page li {
-            list-style:none;
-            color: #ffffff;
-            margin-bottom: 0;
-        }
-        .funciona-page ul {
+.funciona-page ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-            margin-bottom: 0;
-        }
+.funciona-page li {
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
 
-        .funciona-page .section {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            padding: 0 0;
-        }
+/* Secciones alternadas */
+.funciona-page .section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
 
-        .funciona-page .section:nth-child(odd) {
-            background-color: #00aa5a;
-        }
+.funciona-page .section:nth-child(odd) {
+    background-color: #e9e9e9;
+}
 
-        .funciona-page .section:nth-child(even) {
-            background-color: #333333;
-        }
+.funciona-page .section:nth-child(even) {
+    background-color: #333333;
+}
 
-        .funciona-page .section:nth-child(odd) h2, 
-        .funciona-page .section:nth-child(odd) p {
-            color: #ffffff;
-        }
+.funciona-page .section:nth-child(odd) h2, 
+.funciona-page .section:nth-child(odd) p,
+.funciona-page .section:nth-child(odd) li {
+    color: #333333;
+}
 
-        .funciona-page .section:nth-child(even) h2, 
-        .funciona-page .section:nth-child(even) p {
-            color: #ffffff;
-        }
+.funciona-page .section:nth-child(even) h2, 
+.funciona-page .section:nth-child(even) p,
+.funciona-page .section:nth-child(even) li {
+    color: #ffffff;
+}
 
-        .funciona-page .section .image-container {
-            flex: 1 1 20%;
-            height: auto; /* Puede ser ajustado según el diseño */
+.funciona-page .section .image-container {
+    flex: 1 1 30%;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Oculta las partes de la imagen que se salen del contenedor */
-        }
-
-        .funciona-page .section .image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-   /* border-radius: 10px;*/
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Oculta las partes de la imagen que sobresalgan */
+    max-height: 400px; /* Ajusta según el diseño */
+    height: auto; /* Permite flexibilidad en altura */
+    position: relative; /* Necesario para el recorte */
+    background: #ffffff; /* Color de fondo por si la imagen no carga */
+    border-radius: 8px;
+    
 }
 
-        .funciona-page .section .text-container {
-            flex: 1 1 70%;
-            padding: 35px;
-        }
+.funciona-page .section .image-container img {
+    width: 100%; /* Asegura que la imagen rellene horizontalmente */
+    height: auto; /* Mantiene la proporción */
+    object-fit: cover; /* Rellena y recorta los bordes sobrantes */
+    display: block; /* Asegura que se muestre como un bloque */
+    position: relative; /* Ajusta correctamente dentro del contenedor */
+    
+}
 
-        .funciona-page .text-container p {
-            margin: 10px 0;
-        }
+/* Contenedor de texto */
+.funciona-page .section .text-container {
+    flex: 1 1 70%;
+    padding: 2rem;
+}
 
-        .funciona-page .buttons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin: 20px 0;
-        }
+.funciona-page .text-container p {
+    margin: 1rem 0;
+}
 
-        .funciona-page .buttons button {
-            padding: 10px 20px;
-            background-color: #00aa5a;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
+/* Botones */
+.funciona-page .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
 
-        .funciona-page .buttons button:hover {
-            background-color: #007d43;
-        }
+.funciona-page .buttons button {
+    padding: 10px 20px;
+    background-color: #00aa5a;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
 
-        /* Estilos responsivos */
-        @media (max-width: 768px) {
-            .funciona-page .section {
-                flex-direction: column;
-                text-align: center;
-            }
+.funciona-page .buttons button:hover {
+    background-color: #007d43;
+}
 
-            .funciona-page .section .image-container, 
-            .funciona-page .section .text-container {
-                flex: 1 1 100%;
-            }
+/* Responsividad */
+@media (max-width: 768px) {
+    .funciona-page .section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .funciona-page .funciona-container {
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 0;
+    }
 
-            .funciona-page .section .image-container {
-                margin-bottom: 15px;
-            }
-        }
+    .funciona-page .section .image-container, 
+    .funciona-page .section .text-container {
+        flex: 1 1 100%;
+    }
+
+    .funciona-page .section .image-container {
+        margin-bottom: 1rem;
+    }
+}
+
 
         #sobre-nosotros {
             background-color: #f9f9f9;
@@ -668,7 +692,16 @@ body {
 
 
 
-/* General styles for the portfolio section */
+
 
   
+.content-box {
+    background-color: #ffffff; /* Fondo blanco o ligeramente cálido */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    padding: 20px; /* Espaciado interno */
+    margin: 20px auto; /* Centrado con espacio exterior */
+    max-width: 800px; /* Ancho máximo del contenido */
+  }
+
 
