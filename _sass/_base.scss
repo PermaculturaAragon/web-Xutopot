@@ -390,17 +390,26 @@ body {
 
 .letralogo {
     font-family: 'xutofont';
-    font-size:larger;
+    font-size:200%;
     font-weight: normal;
+
     }
 
 .letralogoverde {
         color: ($theme-primary);
         font-family: 'xutofont';
-        font-size:larger;
+        font-size:200%;
         font-weight: normal;
         }
+        @media (max-width: 768px) {          
+            .letralogo{              
+                font-size:larger;
+            }
+            .letralogoverde{              
+                font-size:larger;
+            }
 
+    }
 
 .doblefoto{        
         .section {            
