@@ -1,70 +1,137 @@
-<section id="funciona">
-    <div class="container text-center">
-    <h2>¿Cómo funciona?</h2> <hr>
-</div>
-  <div class="funciona-page">
-        <div class="funciona-container">
-            <section class="section">
-                <div class="image-container">
-                    <img src="img/boceto.png" alt="Instalación del baño seco">
-                </div>
-                <div class="text-container">
-                    <h2>Instalación de Xutopot</h2>
-                    <p><strong>Ubicación:</strong> Selecciona un área plana y estable. Si vas a usar varios puedes instalarlos en diferentes espacios para facilitar el acceso a todos.</p>
-                    <p><strong>Montaje:</strong> Ensambla la estructura principal siguiendo las instrucciones proporcionadas. Generalmente, dos personas pueden completar el montaje en menos de 15 minutos con sólo una llave allen. Ancla la estructura al suelo con las piquetas proporcionadas.</p>
-                    <p><strong>Material Absorbente:</strong> Rellena el cajón de material absorbente como serrín o tierra seca para cubrir los desechos sólidos después de cada uso.</p>
-                </div>
-            </section>
 
-            <section class="section">
-                <div class="image-container">
-                    <img src="img/boceto.png" alt="Uso del baño seco">
-                </div>
-                <div class="text-container">
-                    <h2>Uso del Baño Seco</h2>
-                    <p><strong>Posición:</strong> Utiliza el baño en posición sentada para garantizar el correcto funcionamiento del sistema de separación.</p>
-                    <p><strong>Después de Usar:</strong></p>
-                    <ul>
-                        <li><strong>Caca:</strong> Cúbrela con una capa de material absorbente para controlar olores y facilitar el proceso de secado y compostaje.</li>
-                        <li><strong>Orina:</strong> La orina se dirige automáticamente al contenedor de líquidos o la tubería de riego (dependiendo de la opción elegida); no requiere acción adicional.</li>
-                    </ul>
-                </div>
-            </section>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Cómo funciona?</title>
+    <style>
+    
+    .funciona {
+        font-family: "Merriweather", "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        border: 30px;
+        
+        
+    }
 
-            <section class="section">
-                <div class="image-container">
-                    <img src="img/boceto.png" alt="Mantenimiento del baño seco">
-                </div>
-                <div class="text-container">
-                    <h2>Mantenimiento y Vaciado</h2>
-                    <p><strong>Frecuencia:</strong> La frecuencia de vaciado depende del número de usuarios y la intensidad de uso. Es recomendable revisar los niveles de los contenedores diariamente en eventos con alta afluencia.</p>
-                    <p><strong>Vaciado de Contenedores:</strong></p>
-                    <ul>
-                        <li><strong>Líquidos:</strong> Reciclar orina evita el desperdicio de agua potable y puede usarse como abono rico en nutrientes para plantas.</li>
-                        <li><strong>Sólidos:</strong> Deposita los residuos sólidos mezclados con papel y serrín en un contenedor municipal o en una compostera designada.</li>
-                    </ul>
-                    <p><strong>Limpieza:</strong> Usa guantes y agua con jabón biodegradable para limpiar el separador y el cajón después de cada vaciado. Evita productos químicos agresivos.</p>
-                </div>
-            </section>
+    .funciona .seccion {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center; /* Centra horizontalmente las secciones */
+        padding: 2rem;
+        max-width: 1200px; /* Ancho máximo para evitar estiramientos */
+        margin: 0 auto; /* Centra el contenedor completo en la página */
+        background-color: #f9f9f9;
+    }
+    .funciona .seccion h2 {
+       
+   
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
 
-            <section class="section">
-                <div class="image-container">
-                    <img src="img/boceto.png" alt="Uso del baño seco">
-                </div>
-                <div class="text-container">
-                    <h2>Gadgets incluídos que nunca vienen mal.</h2>
-                    <ul>
-                        <li><i class="fa fa-check"></i> <strong>Luz solar con detector de movimiento:</strong> para encontrar el WC de noche.</li>
-                        <li><i class="fa fa-check"></i> <strong>Techo transparente:</strong> que ilumina el interior de día.</li>
-                        <li><i class="fa fa-check"></i> <strong>Ventilación natural:</strong> que reduce aún más los posibles olores.</li>
-                        <li><i class="fa fa-check"></i> <strong>Anillas para sujeción:</strong> con piquetas al suelo.</li>
-                        <li><i class="fa fa-check"></i> <strong>Cerrojo con aviso de “ocupado”:</strong> que se puede abrir desde el exterior ante una emergencia.</li>
-                        <li><i class="fa fa-check"></i> <strong>Compartimento para almacenar serrín:</strong> o cualquier otro secante.</li>
-                        <li><i class="fa fa-check"></i> <strong>Barnizado de calidad:</strong> para hacer limpiable todas las superficies.</li>
-                      </ul>
-                </div>
-            </section>
+
+    .funciona .seccion img {
+        flex: 1 1 100%;
+        max-width: 50%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .funciona .contenido {
+        flex: 1 1 50%;
+        padding: 1rem;
+    }
+
+    .funciona .contenido h2 {
+     
+        color: #333;
+        margin-bottom: 1rem;
+    }
+
+    .funciona .contenido p {
+        margin-bottom: 1rem;
+        color: #555;
+    }
+
+    @media (max-width: 768px) {
+        .funciona .seccion {
+            flex-direction: column;
+        }
+
+        .funciona .contenido {
+            text-align: center;
+        }
+
+        .funciona .contenido h2 {
+            font-size: 2.5rem;
+        }
+    }
+
+
+    </style>
+</head>
+
+
+<body class="funciona">
+    <!-- Sección 1 -->
+    <section class="seccion">
+        <div class="contenido">
+            <h2>1. Instalación del Baño Seco Portátil</h2><hr>
+            <blockquote><p><strong>Ubicación:</strong> Selecciona un área plana y estable. Si utilizas varios baños, distribúyelos estratégicamente para facilitar el acceso.</p>
+            <p><strong>Montaje:</strong> Ensambla la estructura principal siguiendo las instrucciones proporcionadas. Dos personas pueden completar el montaje en menos de 15 minutos con solo una llave Allen.</p>
+            <p><strong>Material Absorbente:</strong> Rellena el cajón con material absorbente, como serrín o tierra seca, para cubrir los desechos sólidos después de cada uso.</p>
+        </blockquote>
         </div>
-    </div>
+        <img src="img\montaje.png" alt="Instalación del baño seco">
+    </section>
 
-</section>
+    <!-- Sección 2 -->
+    <section class="seccion">
+        <img src="img\uso.png" alt="Uso del baño seco">
+        <div class="contenido">
+            <h2>2. Uso del Baño Seco</h2><hr>
+            <blockquote><p><strong>Observa:</strong> Que todo esté en su sitio.</p>
+            <p><strong>Posición:</strong> Utiliza el baño sentado para asegurar el correcto funcionamiento del sistema de separación.</p>
+            <p><strong>Después de Usar:</strong></p>
+            <p>- <strong>Sólidos:</strong> Cúbrelos con una capa de material absorbente para controlar olores y facilitar el secado y compostaje.</p>
+            <p>- <strong>Líquidos:</strong> La orina se dirige automáticamente al contenedor correspondiente o al sistema de riego, según la configuración, sin necesidad de intervención adicional.</p>
+            <p><strong>Limpia:</strong> Déjalo tal como te gustaría encontrarlo.</p></blockquote>
+        </div>
+    </section>
+
+    <!-- Sección 3 -->
+    <section class="seccion">
+        <div class="contenido">
+            <h2>3. Mantenimiento y Vaciado</h2><hr>
+            <blockquote><p><strong>Frecuencia:</strong> Revisa los niveles de los contenedores diariamente en eventos de alta afluencia para determinar la necesidad de vaciado.</p>
+            <p><strong>Vaciado de Contenedores:</strong></p>
+            <p>- <strong>Líquidos:</strong> La orina puede ser reciclada como abono natural, un recurso rico en nitrógeno, fósforo y potasio para el riego de plantas.</p>
+            <p>- <strong>Sólidos:</strong> Una vez al día, cierra la bolsa del contenedor de sólidos, deséchala en un contenedor municipal de restos o compóstala siguiendo prácticas adecuadas. Reemplaza la bolsa.</p>
+            <p><strong>Limpieza:</strong> Usa guantes adecuados para limpiar el separador y el cajón con agua y jabón biodegradable tras cada vaciado.</p></blockquote>
+        </div>
+        <img src="img\limpieza.png" alt="Mantenimiento y vaciado">
+    </section>
+
+    <!-- Sección 4 -->
+    <section class="seccion">
+        <img src="img\gadgets.png" alt="Gadgets incluidos">
+        <div class="contenido">
+            <h2>4. Gadgets Incluidos</h2><hr>
+        <blockquote><p>- Luz solar con detector de movimiento para localizar el baño por la noche.</p>
+            <p>- Techo transparente que ilumina el interior durante el día.</p>
+            <p>- Ventilación natural para reducir olores.</p>
+            <p>- Anillas para sujeción con piquetas al suelo.</p>
+            <p>- Cerrojo con aviso de “ocupado” y opción de apertura exterior en emergencias.</p>
+            <p>- Compartimento de almacenamiento para material absorbente.</p>
+            <p>- Barnizado de calidad para facilitar la limpieza de todas las superficies.</p>
+        </blockquote>
+        </div>
+    </section>
+</body>
+</html>
