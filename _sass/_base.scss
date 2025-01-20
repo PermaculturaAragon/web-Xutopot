@@ -495,8 +495,13 @@ body {
       flex-direction: column; /* Las columnas se apilan */
     }
   
-    .que-es-section .text-content,
+    .que-es-section .text-content{
+        order: 2; /* Asegura que el texto siempre venga después */
+        text-align: center;
+
+    }
     .que-es-section .image-content {
+        order: 1; /* Asegura que la imagen siempre esté primero */
       max-width: 100%; /* Ocupa todo el ancho */
       text-align: center; /* Centrar el texto e imagen */
     }

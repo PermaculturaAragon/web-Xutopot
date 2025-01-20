@@ -65,7 +65,12 @@
         }
 
         .nosotros .contenido {
-            text-align: center;
+                order: 2; /* Asegura que el texto siempre venga después */
+                text-align: center;
+            }
+        .nosotros .seccion img {
+                order: 1; /* Asegura que la imagen siempre esté primero */
+                max-width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
         }
 
         .nosotros .contenido h2 {
