@@ -584,3 +584,89 @@ body {
   }
 
 
+
+
+  /* --- SECCIÓN VENTAJAS --- */
+#ventajas {
+  background-color: #fff;
+  padding: 60px 0;
+}
+
+#ventajas .section-heading {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+#ventajas .service-box {
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 30px 20px;
+  margin: 15px auto;
+  max-width: 340px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#ventajas .service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+#ventajas .service-box i {
+  margin-bottom: 15px;
+  color: #009b63; /* verde Xutopot */
+}
+
+#ventajas .text-muted2 {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+#ventajas .text-muted.small {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+#ventajas .cta-ventajas {
+  background-color: #e8f7f0;
+  padding: 50px 20px;
+  margin-top: 60px;
+  border-radius: 12px;
+}
+
+#ventajas .cta-ventajas h3 {
+  font-weight: 700;
+  color: #007b5e;
+  margin-bottom: 20px;
+}
+
+#ventajas .btn-primary {
+  background-color: #009b63;
+  border: none;
+}
+
+#ventajas .btn-primary:hover {
+  background-color: #007b4a;
+}
+
+
+/* Forzar grid limpia en la sección de ventajas */
+#ventajas .ventajas-grid .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* centra las columnas en la fila */
+}
+
+/* Las columnas dejan de flotar y se comportan como items flex */
+#ventajas .ventajas-grid .row > [class*='col-'] {
+  float: none;
+  display: flex;
+}
+
+/* La tarjeta ocupa todo el alto de la columna */
+#ventajas .service-box {
+  flex: 1 1 auto;
+}
+
